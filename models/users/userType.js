@@ -7,6 +7,7 @@ module.exports = new graphql.GraphQLObjectType({
     return {
       TIF: {type: graphql.GraphQLString},
       department: {type: graphql.GraphQLString},
+      fullName: {type: graphql.GraphQLString}
     };
   }
 });

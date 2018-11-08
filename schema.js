@@ -1,9 +1,9 @@
 
 const  graphql = require('graphql')
-const Query = require('./Query.js')
+const RootQuery = require('./rootQuery')
 
 const Schema = new graphql.GraphQLSchema({
-  query: Query,
+  query: RootQuery,
   // mutation: Mutation
 });
 

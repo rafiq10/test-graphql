@@ -1,5 +1,5 @@
 const Conn = require('../../db')
-const Sequelize = require('Sequelize')
+const Sequelize = require('sequelize')
 
 const ItemModel = Conn.define('tblUsers', {
   TIF: {
@@ -9,6 +9,9 @@ const ItemModel = Conn.define('tblUsers', {
   department: {
     type: Sequelize.STRING,
   },
+  fullName: {
+    type: Sequelize.STRING,
+  }
 },
 {
   timestamps: false,
