@@ -82,7 +82,7 @@ accBooksSumsByNumProject = {
 
     return Conn.query(`
       SELECT 
-      [numProject],
+      [country],[numProject],
       SUM(ISNULL([ingresos],0)) AS [sumIngresos],
       SUM(ISNULL([MODI],0)) AS [sumMODI],
 
@@ -118,7 +118,7 @@ accBooksSumsByNumProject = {
       `
       + whereClause +
       `
-        GROUP BY [numProject]`, 
+        GROUP BY [country],[numProject]`, 
     {type: Sequelize.QueryTypes.SELECT})
     .then(res =>{
       return res
