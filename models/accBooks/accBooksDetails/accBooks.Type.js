@@ -9,7 +9,8 @@ module.exports = new graphql.GraphQLObjectType({
       myMonth: {type: graphql.GraphQLInt},
       myYear: {type: graphql.GraphQLInt},
       country: {type: graphql.GraphQLString},
-      ingresos: {type: graphql.GraphQLFloat}
+      ingresos: {type: graphql.GraphQLFloat},
+      sumIngresos: {type: graphql.GraphQLFloat}
     };
   }
 });

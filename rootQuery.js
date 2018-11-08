@@ -1,13 +1,12 @@
 const  graphql = require('graphql')
 const usersResolver = require('./models/users/usersRresolver.js')
-const accBooksResolver = require('./models/accBooks/accBooksResolver.js')
-const accBooksDetailResolver = accBooksResolver.accBooksDetailResolver
-const accBooksSumByCountry = accBooksResolver.accBooksSumByCountry
+const accBooksDetailResolver = require('./models/accBooks/accBooksResolver')
+const accBooksSumByCountry = require('./models/accBooks/accBooksSumsResolver')
 module.exports = new graphql.GraphQLObjectType({
     name: 'RootQuery',
     fields: {
       accBooks: accBooksDetailResolver,
-      // accBooksSum: accBooksSumByCountry,
+      accBooksSum: accBooksSumByCountry,
       users: usersResolver,
       }
 

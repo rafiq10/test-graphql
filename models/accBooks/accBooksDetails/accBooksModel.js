@@ -1,4 +1,4 @@
-const Conn = require('../../db')
+const Conn = require('../../../db')
 const Sequelize = require('sequelize')
 
 const AccBooksModel = Conn.define('tblAccBooksMgt', {
